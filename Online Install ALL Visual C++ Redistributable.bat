@@ -82,9 +82,11 @@ if "!ar!"=="dx" goto :install_dx
 goto :install_next
 
 :install_dx
-"!i!.exe" /Q /C /T:".\dx"
-".\dx\DXSETUP.exe" /silent
-rmdir /s /q ".\dx"
+set "dxdir=!CD!\dx"
+mkdir "!dxdir!" 2>nul
+"!i!.exe" /Q /C /T:"!dxdir!"
+"!dxdir!\DXSETUP.exe" /silent
+rmdir /s /q "!dxdir!"
 
 :install_next
 del "!i!.exe" /q 2>nul
