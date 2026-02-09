@@ -4,7 +4,21 @@ Small scripts to automate routine processes for IT system admins.
 
 ## Online Install ALL Visual C++ Redistributable & DirectX
 
-Automatically downloads and installs all Visual C++ Redistributable packages (2005–2022, x86 + x64) and DirectX June 2010 from official Microsoft servers. Uses pipeline architecture — downloads the next package while installing the current one.
+Tired of manually installing the same redistributables every time after a fresh Windows install, so I wrote a script to automate it.
+
+One command — and all Visual C++ Redistributable packages (2005–2022, x86 + x64) and DirectX June 2010 are downloaded from official Microsoft servers and installed automatically. Uses pipeline architecture — downloads the next package while installing the current one.
+
+### What gets installed
+
+| # | Package | Architectures |
+|---|---|---|
+| 1–2 | Visual C++ 2005 Redistributable | x86, x64 |
+| 3–4 | Visual C++ 2008 Redistributable | x86, x64 |
+| 5–6 | Visual C++ 2010 Redistributable | x86, x64 |
+| 7–8 | Visual C++ 2012 Redistributable | x86, x64 |
+| 9–10 | Visual C++ 2013 Redistributable | x86, x64 |
+| 11–12 | Visual C++ 2015–2022 Redistributable | x86, x64 |
+| 13 | DirectX End-User Runtime (June 2010) | — |
 
 ### Quick Start
 
@@ -22,18 +36,6 @@ curl -sL "https://raw.githubusercontent.com/UberMorgott/ItQoL/main/Online%20Inst
 ```
 
 > **Important:** The terminal must be run as Administrator. If you forget, the script will request UAC elevation automatically.
-
-### What gets installed
-
-| Package | Versions |
-|---|---|
-| Visual C++ 2005 | x86, x64 |
-| Visual C++ 2008 | x86, x64 |
-| Visual C++ 2010 | x86, x64 |
-| Visual C++ 2012 | x86, x64 |
-| Visual C++ 2013 | x86, x64 |
-| Visual C++ 2015–2022 | x86, x64 |
-| DirectX June 2010 | — |
 
 ### Features
 
